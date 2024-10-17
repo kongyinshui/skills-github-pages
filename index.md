@@ -17,9 +17,9 @@
 <h3 id="menuTitle2">2024-09-10作业2</h3>
 <div id="popupMenu2" class="menu">
     <ul>
-        <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-09-10-Computer Graphics task 2/demos/a.html">2024-09-24作业2任务a</a></li>
-        <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-09-10-Computer Graphics task 2/demos/b.html">2024-09-124作业2任务b</a></li>
-        <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-09-10-Computer Graphics task 2/demos/c,d,e.html">2024-09-10作业2任务cde</a></li>
+        <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-09-24-Computer Graphics task 2/demos/a.html">2024-09-24作业2任务a</a></li>
+        <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-09-24-Computer Graphics task 2/demos/b.html">2024-09-24作业2任务b</a></li>
+        <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-09-24-Computer Graphics task 2/demos/c,d,e.html">2024-09-24作业2任务cde</a></li>
     </ul>
 </div>
 
