@@ -7,8 +7,10 @@
 <div id="popupMenu" class="menu">
     <ul>
         <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-09-10-Computer Graphics task 1/demos/1.html">2024-09-10作业1任务1</a></li>
-        <li><a href="#about">关于</a></li>
-        <li><a href="#contact">联系</a></li>
+        <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-09-10-Computer Graphics task 1/demos/2.html">2024-09-10作业1任务2</a></li>
+        <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-09-10-Computer Graphics task 1/demos/3.html">2024-09-10作业1任务3</a></li>
+        <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-09-10-Computer Graphics task 1/demos/4.html">2024-09-10作业1任务4</a></li>
+        <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-09-10-Computer Graphics task 1/demos/5.html">2024-09-10作业1任务5</a></li>
     </ul>
 </div>
 
@@ -76,15 +78,5 @@ document.getElementById('menuTitle').addEventListener('click', function() {
     menu.classList.toggle('show');
 });
 </script>
- 
-[2024-09-10作业1任务1](https://kongyinshui.github.io/skills-github-pages/2024-09-10-Computer Graphics task 1/demos/1.html)
-
-[2024-09-10作业1任务2](https://kongyinshui.github.io/skills-github-pages/2024-09-10-Computer Graphics task 1/demos/2.html)
-
-[2024-09-10作业1任务3](https://kongyinshui.github.io/skills-github-pages/2024-09-10-Computer Graphics task 1/demos/3.html)
-
-[2024-09-10作业1任务4](https://kongyinshui.github.io/skills-github-pages/2024-09-10-Computer Graphics task 1/demos/4.html)
-
-[2024-09-10作业1任务5](https://kongyinshui.github.io/skills-github-pages/2024-09-10-Computer Graphics task 1/demos/5.html)
  
 
