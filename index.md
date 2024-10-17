@@ -24,7 +24,7 @@
     </ul>
 </div>
 
-<h3 id="menuTitle3">2024-10-08作业2</h3>
+<h3 id="menuTitle3">2024-10-08作业3</h3>
 <div id="popupMenu3" class="menu">
     <ul>
         <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-10-08-Computer Graphics task 3/demos/a.html">2024-10-08作业3任务a</a></li>
