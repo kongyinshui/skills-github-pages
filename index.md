@@ -14,12 +14,20 @@
     </ul>
 </div>
 
-<h3 id="menuTitle2">2024-09-10作业2</h3>
+<h3 id="menuTitle2">2024-09-24作业2</h3>
 <div id="popupMenu2" class="menu">
     <ul>
         <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-09-24-Computer Graphics task 2/demos/a.html">2024-09-24作业2任务a</a></li>
         <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-09-24-Computer Graphics task 2/demos/b.html">2024-09-24作业2任务b</a></li>
         <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-09-24-Computer Graphics task 2/demos/c,d,e.html">2024-09-24作业2任务cde</a></li>
+    </ul>
+</div>
+
+<h3 id="menuTitle3">2024-10-08作业2</h3>
+<div id="popupMenu3" class="menu">
+    <ul>
+        <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-10-08-Computer Graphics task 3/demos/a.html">2024-10-08作业3任务a</a></li>
+        <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-10-08-Computer Graphics task 3/demos/b.html">2024-10-08作业3任务b</a></li>
     </ul>
 </div>
 
@@ -88,6 +96,10 @@ document.getElementById('menuTitle1').addEventListener('click', function() {
 });
  document.getElementById('menuTitle2').addEventListener('click', function() {
     var menu = document.getElementById('popupMenu2');
+    menu.classList.toggle('show');
+});
+ document.getElementById('menuTitle3').addEventListener('click', function() {
+    var menu = document.getElementById('popupMenu3');
     menu.classList.toggle('show');
 });
 </script>
