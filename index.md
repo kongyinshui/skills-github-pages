@@ -32,6 +32,17 @@
     </ul>
 </div>
 
+<h3 id="menuTitle4">2024-10-15作业4</h3>
+
+<div id="popupMenu4" class="menu">
+    <ul>
+        <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-10-15-Computer Graphics task 4/demos/a.html">2024-10-15作业4任务a</a></li>
+        <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-10-15-Computer Graphics task 4/demos/b.html">2024-10-15作业4任务b</a></li>
+        <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-10-15-Computer Graphics task 4/demos/c.html">2024-10-15作业4任务c</a></li>
+        <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-10-15-Computer Graphics task 4/demos/d.html">2024-10-15作业4任务d</a></li>
+    </ul>
+</div>
+
 <!-- CSS 部分 -->
 <style>
 body {
@@ -101,6 +112,10 @@ document.getElementById('menuTitle1').addEventListener('click', function() {
 });
  document.getElementById('menuTitle3').addEventListener('click', function() {
     var menu = document.getElementById('popupMenu3');
+    menu.classList.toggle('show');
+});
+ document.getElementById('menuTitle4').addEventListener('click', function() {
+    var menu = document.getElementById('popupMenu4');
     menu.classList.toggle('show');
 });
 </script>
