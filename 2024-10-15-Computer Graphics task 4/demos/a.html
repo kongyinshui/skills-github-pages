@@ -7,13 +7,13 @@
     <script id="rtvshader" type="x-shader/x-vertex">
 	#version 300 es
 	in vec4 vPosition;
-	in vec4 vColor;
-	out vec4 aColor;
+	//in vec4 vColor;
+	//out vec4 aColor;
 
 	void main()
 	{
 		//compute the sins and cos of theta for each of the three axis in one computation
-		aColor = vColor;
+//		aColor = vColor;
 		gl_Position= vPosition;
 	}
 	</script>
@@ -21,23 +21,23 @@
     <script id="rtfshader" type="x-shader/x-fragment">
 	#version 300 es
 	precision mediump float;
-	in vec4 aColor;
+//	in vec4 aColor;
 	out vec4 fColor;
 
 	void main()
 	{
-		fColor = aColor;
+		fColor =vec4(1.0,0.0,0.0,1.0);
 	}
 	</script>
-    <script type="text/javascript" src="../js/common/webgl-utils.js"></script>
-    <script type="text/javascript" src="../js/common/initShaders.js"></script>
-    <script type="text/javascript" src="../js/common/gl-matrix-min.js"></script>
+    <script type="text/javascript" src="../1/webgl-utils.js"></script>
+    <script type="text/javascript" src="../1/initShaders.js"></script>
+    <script type="text/javascript" src="../1/gl-matrix-min.js"></script>
     
-    <script type="text/javascript" src="../js/ch04/a.js"></script>
+    <script type="text/javascript" src="../1/a.js"></script>
 </head>
 
 <body>
-    <h1>立方体</h1>
+    <h1>正方形</h1>
     <canvas id="rtcb-canvas" width="600" height="600">
         你的浏览器不支持HTML5 canvas元素
     </canvas>
