@@ -10,10 +10,9 @@ var colors = [];
 
 var xAxis = 0;
 var yAxis = 1;
-var zAxis = 2;
 
 var axis = 0;
-var theta = [0, 0, 0];
+var theta = [0, 0];
 
 var thetaLoc;
 var isPaused = false; // 新增变量来控制暂停状态
@@ -37,13 +36,13 @@ window.onload = function initCube() {
     var program = initShaders(gl, "rtvshader", "rtfshader");
     gl.useProgram(program);
 
-    var cBuffer = gl.createBuffer();
+/*    var cBuffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, cBuffer);
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.STATIC_DRAW);
 
     var vColor = gl.getAttribLocation(program, "vColor");
     gl.vertexAttribPointer(vColor, 4, gl.FLOAT, false, 0, 0);
-    gl.enableVertexAttribArray(vColor);
+    gl.enableVertexAttribArray(vColor);*/
 
     var vBuffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, vBuffer);
@@ -54,7 +53,7 @@ window.onload = function initCube() {
     gl.enableVertexAttribArray(vPosition);
 
     thetaLoc = gl.getUniformLocation(program, "theta");
-    gl.uniform3fv(thetaLoc, theta);
+    gl.uniform2fv(thetaLoc, theta);
 
     document.getElementById("xbutton").onclick = function () {
         axis = xAxis;
@@ -62,10 +61,6 @@ window.onload = function initCube() {
 
     document.getElementById("ybutton").onclick = function () {
         axis = yAxis;
-    }
-
-    document.getElementById("zbutton").onclick = function () {
-        axis = zAxis;
     }
     document.getElementById("pause").onclick = function () {
           isPaused = !isPaused; // 切换暂停状态
@@ -85,7 +80,7 @@ function makeCube() {
         vec4.fromValues(0.5, -0.5, -0.5, 1.0),
     ];
 
-    var vertexColors = [
+ /*   var vertexColors = [
         vec4.fromValues(0.0, 0.0, 0.0, 1.0),
         vec4.fromValues(1.0, 0.0, 0.0, 1.0),
         vec4.fromValues(1.0, 1.0, 0.0, 1.0),
@@ -95,20 +90,20 @@ function makeCube() {
         vec4.fromValues(0.0, 1.0, 1.0, 1.0),
         vec4.fromValues(1.0, 1.0, 1.0, 1.0)
     ];
-
+*/
     var faces = [
         1, 0, 3, 1, 3, 2, //正
-        2, 3, 7, 2, 7, 6, //右
+/*        2, 3, 7, 2, 7, 6, //右
         3, 0, 4, 3, 4, 7, //底
         6, 5, 1, 6, 1, 2, //顶
         4, 5, 6, 4, 6, 7, //背
-        5, 4, 0, 5, 0, 1  //左
+        5, 4, 0, 5, 0, 1  //左*/
     ];
 
     for (var i = 0; i < faces.length; i++) {
         points.push(vertices[faces[i]][0], vertices[faces[i]][1], vertices[faces[i]][2]);
 
-        colors.push(vertexColors[Math.floor(i / 6)][0], vertexColors[Math.floor(i / 6)][1], vertexColors[Math.floor(i / 6)][2], vertexColors[Math.floor(i / 6)][3]);
+//        colors.push(vertexColors[Math.floor(i / 6)][0], vertexColors[Math.floor(i / 6)][1], vertexColors[Math.floor(i / 6)][2], vertexColors[Math.floor(i / 6)][3]);
     }
 }
 
@@ -118,7 +113,7 @@ function render() {
     if (!isPaused) { // 只有在没有暂停时才旋转
         theta[axis] += 0.05;
     }
-    gl.uniform3fv(thetaLoc, theta);
+    gl.uniform2fv(thetaLoc, theta);
 
     gl.drawArrays(gl.TRIANGLES, 0, points.length / 3);
     //gl.drawElements( gl.TRIANGLES, numVertices, gl.UNSIGNED_BYTE, 0 );
