@@ -7,17 +7,17 @@
     <script id="rtvshader" type="x-shader/x-vertex">
 	#version 300 es
 	in vec4 vPosition;
-	in vec4 vColor;
-	out vec4 aColor;
+//	in vec4 vColor;
+//	out vec4 aColor;
 
-	uniform vec3 theta;
+	uniform vec2 theta;
 
 	void main()
 	{
 		//compute the sins and cos of theta for each of the three axis in one computation
-		vec3 angles = radians( theta );
-		vec3 cost = cos( theta );
-		vec3 sint = sin( theta );
+		vec2 angles = radians( theta );
+		vec2 cost = cos( theta );
+		vec2 sint = sin( theta );
 
 		mat4 rx = mat4(  1.0,  0.0,  0.0, 0.0,
 						 0.0,  cost.x,  sint.x, 0.0,
@@ -31,45 +31,43 @@
 						 0.0,  0.0,  0.0,  1.0
 						 );
 
-		mat4 rz = mat4(  cost.z,  sint.z,  0.0,  0.0,
+/*		mat4 rz = mat4(  cost.z,  sint.z,  0.0,  0.0,
 						 -sint.z,  cost.z,  0.0,  0.0,
 						 0.0,  0.0,  1.0,  0.0,
 						 0.0,  0.0,  0.0,  1.0
 						 );
-
-		aColor = vColor;
-		gl_Position = rz * ry * rx * vPosition;
-		gl_Position.z = -gl_Position.z;
+*/
+//		aColor = vColor;
+		gl_Position = ry * rx * vPosition;
 	}
 	</script>
 
     <script id="rtfshader" type="x-shader/x-fragment">
 	#version 300 es
 	precision mediump float;
-	in vec4 aColor;
+//	in vec4 aColor;
 	out vec4 fColor;
 
 	void main()
 	{
-		fColor = aColor;
+		fColor = vec4(1.0,0.0,0.0,1.0);
 	}
 	</script>
-    <script type="text/javascript" src="../js/common/webgl-utils.js"></script>
-    <script type="text/javascript" src="../js/common/initShaders.js"></script>
-    <script type="text/javascript" src="../js/common/gl-matrix-min.js"></script>
+    <script type="text/javascript" src="../1/webgl-utils.js"></script>
+    <script type="text/javascript" src="../1/initShaders.js"></script>
+    <script type="text/javascript" src="../1/gl-matrix-min.js"></script>
     
-    <script type="text/javascript" src="../js/ch04/c.js"></script>
+    <script type="text/javascript" src="../1/c.js"></script>
 </head>
 
 <body>
-    <h1>旋转的立方体</h1>
+    <h1>旋转的正方形</h1>
     <canvas id="rtcb-canvas" width="600" height="600">
         你的浏览器不支持HTML5 canvas元素
     </canvas>
 
     <button id="xbutton">Rotate X</button>
     <button id="ybutton">Rotate Y</button>
-    <button id="zbutton">Rotate Z</button>
 	<button id="pause">pause</button>
 </body>
 
