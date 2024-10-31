@@ -57,7 +57,7 @@
 
 <div id="popupMenu6" class="menu">
     <ul>
-        <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-10-29-Computer Graphics task 6/demos/a.html">2024-10-22作业5任务a</a></li>
+        <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-10-29-Computer Graphics task 6/demos/a.html">2024-10-29作业6任务a</a></li>
     </ul>
 </div>
 <!-- CSS 部分 -->
