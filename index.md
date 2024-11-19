@@ -69,7 +69,13 @@
         <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-11-05-Computer Graphics task 6/demos/c.html">2024-11-05作业6任务c</a></li>
     </ul>
 </div>
+<h3 id="menuTitle8">2024-11-12作业7</h3>
 
+<div id="popupMenu8" class="menu">
+    <ul>
+        <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-11-12-Computer Graphics task 7/demos/a.html">2024-11-12作业7任务a</a></li>
+    </ul>
+</div>
 <!-- CSS 部分 -->
 <style>
 body {
@@ -155,6 +161,10 @@ document.getElementById('menuTitle1').addEventListener('click', function() {
 });
    document.getElementById('menuTitle7').addEventListener('click', function() {
     var menu = document.getElementById('popupMenu7');
+    menu.classList.toggle('show');
+});
+    document.getElementById('menuTitle8').addEventListener('click', function() {
+    var menu = document.getElementById('popupMenu8');
     menu.classList.toggle('show');
 });
 </script>
