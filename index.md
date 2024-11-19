@@ -60,6 +60,16 @@
         <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-10-29-Computer Graphics task 6/demos/a.html">2024-10-29作业6任务a</a></li>
     </ul>
 </div>
+<h3 id="menuTitle7">2024-11-05作业6</h3>
+
+<div id="popupMenu7" class="menu">
+    <ul>
+        <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-11-05-Computer Graphics task 6/demos/a.html">2024-11-05作业6任务a</a></li>
+        <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-11-05-Computer Graphics task 6/demos/b.html">2024-11-05作业6任务b</a></li>
+        <li><a href="https://kongyinshui.github.io/skills-github-pages/2024-11-05-Computer Graphics task 6/demos/c.html">2024-11-05作业6任务c</a></li>
+    </ul>
+</div>
+
 <!-- CSS 部分 -->
 <style>
 body {
@@ -141,6 +151,10 @@ document.getElementById('menuTitle1').addEventListener('click', function() {
 });
   document.getElementById('menuTitle6').addEventListener('click', function() {
     var menu = document.getElementById('popupMenu6');
+    menu.classList.toggle('show');
+});
+   document.getElementById('menuTitle7').addEventListener('click', function() {
+    var menu = document.getElementById('popupMenu7');
     menu.classList.toggle('show');
 });
 </script>
