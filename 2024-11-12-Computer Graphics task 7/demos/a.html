@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <script id="vertex-shader" type="x-shader/x-vertex">
+        #version 300 es
+                in vec4 vPosition;
+                out vec2 vTexCoord;
+        
+                void main() {
+                    gl_Position = vPosition;
+        
+                    // 简单纹理坐标映射，将球的3D坐标映射到2D纹理坐标
+                    float u = 0.5 + atan(vPosition.z, vPosition.x) / (2.0 * 3.1415926);
+                    float v = 0.5 - asin(vPosition.y) / 3.1415926;
+                    vTexCoord = vec2(u, v);
+                }
+	</script>
+
+    <script id="fragment-shader" type="x-shader/x-fragment">
+        #version 300 es
+                precision mediump float;
+        
+                in vec2 vTexCoord;
+                out vec4 fColor;
+        
+                // 棋盘纹理计算函数
+                vec4 checkerPattern(vec2 coord) {
+                    float scale = 10.0; // 控制棋盘大小
+                    float pattern = mod(floor(coord.x * scale) + floor(coord.y * scale), 2.0);
+                    if (pattern == 0.0) {
+                        return vec4(1.0, 1.0, 1.0, 1.0); // 白色
+                    } else {
+                        return vec4(0.0, 0.0, 0.0, 1.0); // 黑色
+                    }
+                }
+        
+                void main() {
+                    fColor = checkerPattern(vTexCoord);
+                }
+	</script>
+
+    <script type="text/javascript" src="../js/common/webgl-utils.js"></script>
+    <script type="text/javascript" src="../js/common/initShaders.js"></script>
+    <script type="text/javascript" src="../js/common/gl-matrix.js"></script>
+    <script type="text/javascript" src="../js/common/objloader.js"></script>
+
+    <script type="text/javascript" src="../js/ch06/a.js"></script>
+</head>
+
+<body onload="initSphere()">
+    <h1>棋盘纹理球</h1>
+    <canvas id="gl-canvas" width="800" height="800">
+        你的浏览器不支持HTML5 Canvas元素
+    </canvas>
+</body>
+
+</html>
